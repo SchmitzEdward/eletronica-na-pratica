@@ -17,7 +17,7 @@ Durante a montagem, foram encontrados:
 - explicação do funcionamento;
 - formas de onda;
 - cálculo da frequência;
-- erratas identificadas.
+
 
 ## Vídeo
 
