@@ -31,8 +31,8 @@ Cada programa fica numa pasta com o mesmo nome porque a IDE do Arduino exige iss
 
 ## Vídeos
 
-- Episódio 1, o grilo original: [LINK DO VÍDEO 1]
-- Episódio 2, o grilo com Arduino: [LINK DO VÍDEO 2]
+- Episódio 1, o grilo original: https://youtu.be/Arfrq9QXHxc
+- Episódio 2, o grilo com Arduino: https://youtu.be/ggpLcA16KN4
 
 ---
 
@@ -44,24 +44,24 @@ O som continua sendo todo do circuito do Bêda. O Arduino não gera som nenhum: 
 
 Eles formam uma escada. Cada um acrescenta uma camada ao anterior, então dá para estudar na ordem e parar no degrau que interessar.
 
-| Programa | O que faz |
-|---|---|
-| `grilo_simples` | Escureceu, canta. Clareou, cala. Serve para testar a ligação e calibrar o LDR. |
-| `grilo_infernal` | Ao escurecer, espera um tempo sorteado antes de começar a cantar. |
-| `grilo_arisco` | Canta e cala em intervalos sorteados; leva susto se for pego cantando. |
+| Programa                 | O que faz                                                                                                                   |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `grilo_simples`          | Escureceu, canta. Clareou, cala. Serve para testar a ligação e calibrar o LDR.                                              |
+| `grilo_infernal`         | Ao escurecer, espera um tempo sorteado antes de começar a cantar.                                                           |
+| `grilo_arisco`           | Canta e cala em intervalos sorteados; leva susto se for pego cantando.                                                      |
 | `grilo_arisco_esquecido` | Toda luz que acende assusta; se a luz ficar acesa por 15 minutos, ele esquece o susto. **É o programa explicado no vídeo.** |
 
 ## A ligação
 
 É a mesma para os quatro programas.
 
-| Pino do Nano | Vai para |
-|---|---|
-| D3 | resistor de 1 kΩ, e daí ao pino 4 (reset) do 555 nº 3 |
-| A0 | junção do resistor de 47 kΩ com o LDR |
-| 5V | a outra ponta do resistor de 47 kΩ |
-| GND | a outra ponta do LDR e o negativo da fonte |
-| VIN | +9 V |
+| Pino do Nano | Vai para                                              |
+| ------------ | ----------------------------------------------------- |
+| D3           | resistor de 1 kΩ, e daí ao pino 4 (reset) do 555 nº 3 |
+| A0           | junção do resistor de 47 kΩ com o LDR                 |
+| 5V           | a outra ponta do resistor de 47 kΩ                    |
+| GND          | a outra ponta do LDR e o negativo da fonte            |
+| VIN          | +9 V                                                  |
 
 ```
    5 V (do Nano)                         D3 ──[1 kΩ]── pino 4 do 555 nº 3
@@ -146,22 +146,22 @@ O Monitor Serial mostra o que o bicho está "pensando": a leitura do LDR, o esta
 
 ## Tempos
 
-| Parâmetro | Infernal | Arisco | Arisco Esquecido |
-|---|---|---|---|
-| Espera ao escurecer | 20 s a 1 min | 20 s a 1 min | 20 s a 1 min |
-| Duração do canto | contínuo | 4 a 12 s | 4 a 12 s |
-| Silêncio entre cantos | não tem | 8 a 40 s | 8 a 40 s |
-| Espera depois de um susto | não tem | o dobro | o dobro |
-| Para esquecer o susto | não tem | até cantar de novo | 15 min de luz acesa |
+| Parâmetro                 | Infernal     | Arisco             | Arisco Esquecido    |
+| ------------------------- | ------------ | ------------------ | ------------------- |
+| Espera ao escurecer       | 20 s a 1 min | 20 s a 1 min       | 20 s a 1 min        |
+| Duração do canto          | contínuo     | 4 a 12 s           | 4 a 12 s            |
+| Silêncio entre cantos     | não tem      | 8 a 40 s           | 8 a 40 s            |
+| Espera depois de um susto | não tem      | o dobro            | o dobro             |
+| Para esquecer o susto     | não tem      | até cantar de novo | 15 min de luz acesa |
 
 Todos os tempos estão em `#define` no começo de cada arquivo, em milissegundos. Mude à vontade.
 
 ## As chaves de configuração
 
-| Chave | Valor 0 | Valor 1 |
-|---|---|---|
-| `MODO_DEMO` | tempos reais (tabela acima) | tempos de poucos segundos, para testar e gravar |
-| `DEBUG_SERIAL` | sem mensagens | mostra leitura e estado no Monitor Serial (9600) |
+| Chave          | Valor 0                     | Valor 1                                          |
+| -------------- | --------------------------- | ------------------------------------------------ |
+| `MODO_DEMO`    | tempos reais (tabela acima) | tempos de poucos segundos, para testar e gravar  |
+| `DEBUG_SERIAL` | sem mensagens               | mostra leitura e estado no Monitor Serial (9600) |
 
 No modo demo do Arisco Esquecido a espera cai para 3 a 6 s, o canto para 2 a 4 s e o esquecimento para 20 s. Foi assim que ele rodou no vídeo. O `grilo_simples` só tem o `DEBUG_SERIAL`.
 
