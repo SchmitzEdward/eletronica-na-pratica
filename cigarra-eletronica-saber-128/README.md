@@ -10,10 +10,10 @@ A cigarra usa dois osciladores trabalhando juntos:
 
 ## Arquivos
 
-- `NOME-DO-SEU-ARQUIVO.pdf` — relatório com as medições feitas no osciloscópio Rigol DHO804
+- `cigarra-eletronica-relatorio-bancada.pdf` — relatório com as medições feitas no osciloscópio Rigol DHO804
 
 ## Vídeo
 
-[Link do vídeo no YouTube — inserir após a publicação]
+[Link do vídeo no YouTube — https://youtu.be/lOV0niDfVmI
 
 Créditos do projeto original: Newton C. Braga, Saber Eletrônica nº 128.
