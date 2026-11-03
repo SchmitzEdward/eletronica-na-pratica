@@ -14,6 +14,6 @@ A cigarra usa dois osciladores trabalhando juntos:
 
 ## Vídeo
 
-[Link do vídeo no YouTube — https://youtu.be/lOV0niDfVmI
+[Assista ao vídeo no YouTube](https://youtu.be/lOV0niDfVmI)
 
 Créditos do projeto original: Newton C. Braga, Saber Eletrônica nº 128.
